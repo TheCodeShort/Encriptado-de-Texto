@@ -4,5 +4,13 @@
 }
 
 body{
-    background-color: rgb(149, 111, 183);
+    background-color: #2ECC71;
+    box-sizing: border-box;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    margin: 4%;
+    justify-content: space-between;
 }
