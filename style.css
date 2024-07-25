@@ -6,11 +6,36 @@
 body{
     background-color: #2ECC71;
     box-sizing: border-box;
+    /*vh es la altura del contenedor*/
+    height: 100vh;
+    
 }
 
 .presentacion{
     display: flex;
     align-items: center;
-    margin: 4%;
+    margin: 5%;
     justify-content: space-between;
+    
+}
+
+.presentacion-contenido´{
+    display: flex;
+    width: 600;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.presentacion-contenido{
+    color: blue;
+    padding: 100px;
+    flex-direction: column;ç
+    gap: 50px;
+}
+
+.advertencia{
+    color: rgb(226, 165, 43);
+    padding: 100px;
+    margin: 200px;
+    box-sizing: border-box;
 }
