@@ -29,7 +29,7 @@ body{
 .presentacion-contenido{
     color: blue;
     padding: 100px;
-    flex-direction: column;ç
+    flex-direction: column;
     gap: 50px;
 }
 
