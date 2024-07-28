@@ -35,7 +35,5 @@ body{
 
 .advertencia{
     color: rgb(226, 165, 43);
-    padding: 100px;
-    margin: 200px;
     box-sizing: border-box;
 }
