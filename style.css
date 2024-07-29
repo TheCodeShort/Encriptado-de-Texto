@@ -4,36 +4,68 @@
 }
 
 body{
-    background-color: #2ECC71;
+    background-color: #ffffff;
     box-sizing: border-box;
     /*vh es la altura del contenedor*/
     height: 100vh;
+}
+
+
+
+#normal-textto{
     
+    /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
+    resize: none;
+    border: 2px ;
+    width: 577px;
+    height: 48px;
+    /*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo
+    si no se pone esto quedara por defecto static que no deja mover el objeto*/
+    position: relative;
+    top: 188px;
+    left: 240px;
 }
-
-.presentacion{
-    display: flex;
-    align-items: center;
-    margin: 5%;
-    justify-content: space-between;
-    
-}
-
-.presentacion-contenido´{
-    display: flex;
-    width: 600;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.presentacion-contenido{
-    color: blue;
-    padding: 100px;
-    flex-direction: column;
-    gap: 50px;
+/*de esta manera le cambio propiedades a los atributos de una etiqueta en este caso 
+de  <textare>*/
+textarea::placeholder{
+    color: #0A3871;
 }
 
 .advertencia{
-    color: rgb(226, 165, 43);
-    box-sizing: border-box;
+    width: 229px;
+    height: 18px;
+    position: relative;
+    top: 851px;
+    left: 240px;
+    
+}
+
+.encrptador-botones{
+    position: relative;
+    top: 885px;
+    left: 240px;
+    
+    gap: 100px;
+}
+
+.boton-Encriptar{
+    background-color: #0A3871;
+    color: #FFFFFF;
+    border-radius: 24px;
+    border-style: solid #0A3871;
+    width: 328px;
+    height: 67px;
+}
+
+.boton-Desencriptar{
+    
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-radius: 24px;
+    border-style: solid #0A3871;
+    width: 328px;
+    height: 67px;
+
+
+
 }
