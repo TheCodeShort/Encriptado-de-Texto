@@ -1,21 +1,19 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #F3F5FC;
     box-sizing: border-box;
     /*vh es la altura del contenedor*/
     height: 100vh;
 }
 
 
-
 #normal-textto{
-    
-    /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
-    resize: none;
+    resize: none;  /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
     border: 2px ;
     width: 577px;
     height: 48px;
@@ -25,13 +23,12 @@ body{
     top: 188px;
     left: 240px;
 }
-/*de esta manera le cambio propiedades a los atributos de una etiqueta en este caso 
-de  <textare>*/
-textarea::placeholder{
+
+textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de una etiqueta en este caso de <textare>*/
     color: #0A3871;
 }
 
-.advertencia{
+.advertencia-normal-texto{
     width: 229px;
     height: 18px;
     position: relative;
@@ -40,12 +37,18 @@ textarea::placeholder{
     
 }
 
+
+.advertencia-encrptado-texto{
+
+}
+
 .encrptador-botones{
     position: relative;
     top: 885px;
-    left: 240px;
-    
-    gap: 100px;
+    left: 240px; 
+    display: flex;/*esto nos sirve para convertir el cotenedor en un flex (para comnzar a utilizar sus propiedades flexbox)*/
+    flex-direction: row;/*aca le damos la direccion que va ha tomar los elementos que estan dentro de el contenedor*/
+    gap: 24px; /*esto funcion no sirve con las 2 anteriores como otras funcione*/
 }
 
 .boton-Encriptar{
@@ -58,14 +61,29 @@ textarea::placeholder{
 }
 
 .boton-Desencriptar{
-    
     background-color: #D8DFE8;
     color: #0A3871;
     border-radius: 24px;
     border-style: solid #0A3871;
     width: 328px;
     height: 67px;
+}
 
+.encriptador-texto-informativo{
+    
+}
+.imagen-letra-A{
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
 
-
+.imagen-muñeco{
+    width: 336px;
+    height: 304;
+    position: relative;
+    left: 1034px;
+    top: 283px;
 }
