@@ -13,13 +13,15 @@ body{
 
 
 #normal-textto{
+    background-color: #F3F5FC;
+    outline: none;
     resize: none;  /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
     border: 2px ;
     width: 577px;
-    height: 48px;
+    height: 630px;
     /*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo
     si no se pone esto quedara por defecto static que no deja mover el objeto*/
-    position: relative;
+    position: absolute;
     top: 188px;
     left: 240px;
 }
@@ -28,13 +30,16 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     color: #0A3871;
 }
 
-.advertencia-normal-texto{
+.advertencia-encriptador{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     width: 229px;
     height: 18px;
     position: relative;
     top: 851px;
     left: 240px;
-    
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 .encrptador-botones{
@@ -67,11 +72,28 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 .encriptador-texto-informativo{
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
     
 }
 
+#desencitador-de-texto{
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    resize: none;
+    outline: none;/*para borrar el borde qeu tiene por defecto textarea*/
+    border: none;/*para borrar el borde qeu tiene por defecto textarea*/
+    width: 400px;
+    height: 944px;
+    position: absolute;
+    left: 1000px;
+    top: 40px;
+}
 
+/*como hay mas de un div toca espesificar de donde biene el textarea
+despues biene el textarea el focus y dentro espesificamos el cambio a realizar */
+.encriptador-texto-informativo textarea:focus {
+    box-shadow: 0 0 5px #0A3871
+}
 .imagen-letra-A{
     width: 120px;
     height: 48px;
@@ -80,10 +102,11 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     top: 40px;
 }
 
+/*
 .imagen-muñeco{
     width: 336px;
     height: 304;
     position: relative;
     left: 1034px;
     top: 283px;
-}
+}*/
