@@ -37,11 +37,6 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     
 }
 
-
-.advertencia-encrptado-texto{
-
-}
-
 .encrptador-botones{
     position: relative;
     top: 885px;
@@ -70,8 +65,13 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 }
 
 .encriptador-texto-informativo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
     
 }
+
+
 .imagen-letra-A{
     width: 120px;
     height: 48px;
