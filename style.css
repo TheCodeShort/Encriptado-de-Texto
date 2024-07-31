@@ -1,6 +1,10 @@
 *{
     padding: 0px;
     margin: 0px;
+    /*font-family: "Inter";
+    font-weight: 400;
+    font-size: 32px;
+    line-height:150%;*/
     
 }
 
@@ -13,12 +17,14 @@ body{
 
 
 #normal-textto{
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 32px;
+    line-height:150%;
     background-color: #F3F5FC;
     outline: none;
     resize: none;  /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
     border: 2px ;
-    width: 577px;
-    height: 630px;
     /*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo
     si no se pone esto quedara por defecto static que no deja mover el objeto*/
     position: absolute;
@@ -31,6 +37,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 }
 
 .advertencia-encriptador{
+    font-family: "Inter";
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -76,6 +83,19 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     
 }
 
+.boton-copiar{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-radius: 24px;
+    border-style: solid #0A3871;
+    width: 336px;
+    height: 67px;
+    position: absolute;
+    left: 1032px;
+    top: 901px;
+}
+
+
 #desencitador-de-texto{
     background-color: #FFFFFF;
     border-radius: 32px;
@@ -87,6 +107,9 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     position: absolute;
     left: 1000px;
     top: 40px;
+    background-image: url(img/Muñeco.png); /*esto es para poner una imagen de fondo */
+    background-repeat: no-repeat; /*esto me sirve para no no se repita*/
+    background-position: 32px 397px;/*con esto movemos la imagen*/
 }
 
 /*como hay mas de un div toca espesificar de donde biene el textarea
@@ -102,11 +125,4 @@ despues biene el textarea el focus y dentro espesificamos el cambio a realizar *
     top: 40px;
 }
 
-/*
-.imagen-muñeco{
-    width: 336px;
-    height: 304;
-    position: relative;
-    left: 1034px;
-    top: 283px;
-}*/
+
