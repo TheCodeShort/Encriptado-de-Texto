@@ -8,7 +8,8 @@
     
 }
 
-body{
+main{
+    display: flex;
     background-color: #F3F5FC;
     box-sizing: border-box;
     /*vh es la altura del contenedor*/
@@ -22,12 +23,12 @@ body{
     font-size: 32px;
     line-height:150%;
     background-color: #F3F5FC;
-    outline: none;
     resize: none;  /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
-    border: 2px ;
-    /*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo
-    si no se pone esto quedara por defecto static que no deja mover el objeto*/
-    position: absolute;
+    border: none;
+    border-radius: 2px;
+    width: 600px;
+    height: 605px;
+    position: absolute;/*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo si no se pone esto quedara por defecto static que no deja mover el objeto*/
     top: 188px;
     left: 240px;
 }
@@ -35,6 +36,13 @@ body{
 textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de una etiqueta en este caso de <textare>*/
     color: #0A3871;
 }
+
+#normal-textto:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+
 
 .advertencia-encriptador{
     font-family: "Inter";
@@ -100,16 +108,23 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     background-color: #FFFFFF;
     border-radius: 32px;
     resize: none;
-    outline: none;/*para borrar el borde qeu tiene por defecto textarea*/
+    /*outline: none;/*para borrar el borde qeu tiene por defecto textarea*/
     border: none;/*para borrar el borde qeu tiene por defecto textarea*/
     width: 400px;
     height: 944px;
     position: absolute;
     left: 1000px;
     top: 40px;
+    /*esto sirve para que todo el texto que se escriba sea minuscula*/
+    text-transform: lowercase;
     background-image: url(img/Muñeco.png); /*esto es para poner una imagen de fondo */
     background-repeat: no-repeat; /*esto me sirve para no no se repita*/
     background-position: 32px 397px;/*con esto movemos la imagen*/
+}
+
+#desencitador-de-texto:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
 
 /*como hay mas de un div toca espesificar de donde biene el textarea
