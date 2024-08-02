@@ -107,23 +107,22 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 #desencitador-de-texto{
     background-color: #FFFFFF;
     border-radius: 32px;
-    resize: none;
-    /*outline: none;/*para borrar el borde qeu tiene por defecto textarea*/
+    resize: none;  
     border: none;/*para borrar el borde qeu tiene por defecto textarea*/
     width: 400px;
     height: 944px;
     position: absolute;
     left: 1000px;
     top: 40px;
-    /*esto sirve para que todo el texto que se escriba sea minuscula*/
     text-transform: lowercase;
     background-image: url(img/Muñeco.png); /*esto es para poner una imagen de fondo */
     background-repeat: no-repeat; /*esto me sirve para no no se repita*/
-    background-position: 32px 397px;/*con esto movemos la imagen*/
+    background-position: 32px 283px;/*con esto movemos la imagen*/
+    
 }
 
 #desencitador-de-texto:focus{
-    outline: none;
+    outline: none;/*esto sirve para que todo el texto que se escriba sea minuscula*/
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
 
