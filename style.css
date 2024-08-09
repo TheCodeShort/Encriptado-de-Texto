@@ -17,7 +17,7 @@ main{
 }
 
 
-#normal-textto{
+.normal-textto{
     font-family: "Inter";
     font-weight: 400;
     font-size: 32px;
@@ -37,7 +37,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     color: #0A3871;
 }
 
-#normal-textto:focus{
+.normal-textto:focus{
     outline: none;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
@@ -104,7 +104,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 }
 
 
-#desencitador-de-texto{
+.desencitador-de-texto{
     background-color: #FFFFFF;
     border-radius: 32px;
     resize: none;  
@@ -121,7 +121,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     
 }
 
-#desencitador-de-texto:focus{
+.desencitador-de-texto:focus{
     outline: none;/*esto sirve para que todo el texto que se escriba sea minuscula*/
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 }
