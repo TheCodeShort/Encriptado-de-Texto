@@ -12,26 +12,34 @@
 </head>
 <body>
     <header><img class="imagen-letra-A" src="img/Logo.png" alt="logo de la letra A"></header>
-    <main class="enciptador">
-        <section>
-            <!--placeholder me sirve para que dentro del cuadro se vea un texto indicativo-->
-            <textarea id="normalTexto" class="normal-textto"  placeholder="Ingrese el texto aqui" name="decodificador" ></textarea>
+    <main class="container">
+        <section class="encriptador">
+            <!--placeholder me sirve para que dentro del cuadro se vea un texto indicativo
+            row: Especifica el número de líneas de texto visibles, cols: Especifica el ancho visible del campo de texto, en caracteres..
+            name me sirve para cuando se envie a una bsse de datos lo que se escriba en textarea se guarde con el nombre que elijamos -->
+            <textarea id="normalTexto" class="normal-textto"  placeholder="Ingrese el texto aqui" rows="50"  cols="50" name="textoNormal"></textarea>
             <div class="advertencia-encriptador">
-                <img class="logo-advertencia" src="img/signo-advertencia.png" alt="signo de signo de advertencia">
+                <img class="logo-advertencia" src="img/signo-advertencia.png" alt="signo de advertencia">
                 <p class="advertencia-normal-texto">Solo letras minúsculas y sin acentos</p>
             </div>
-            <div class="encrptador-botones">
-                <button onclick="encritarBoton()" class="boton-Encriptar" >Encriptar</button>
-                <button onclick="desencritarBoton()" class="boton-Desencriptar">Desencriptar</button>
+
+            <div class="botones">
+                <!--atributo type de la etiqueta <button> especifica el comportamiento que tendrá el botón cuando se haga clic en él
+                    pero hay que tener encuenta q podemos poner varios type que hacen distintas cosas -->
+                <button onclick="encritarBoton()" class="boton-Encriptar" type="button">Encriptar</button>
+                <button onclick="desencritarBoton()" class="boton-Desencriptar" type="button">Desencriptar</button>
             </div>
         </section>
 
-        <section>
-            <textarea id="encritadoTexto" class="desencitador-de-texto" name="encriptado-texto" ></textarea>
+        <section class="enciptado">
+            <textarea id="encritadoTexto" class="texto-Encriptado" rows="50" cols="50" name="encriptado-texto" ></textarea>
+            <img class="persona" src="img/Muñeco.png" alt="una persona">
             <div class="encriptador-texto-informativo">
-                <button class="boton-copiar">Copiar</button>
-                <h1 class="advertencia-encriptado-texto">Ningún mensaje fue encontrado</h1>
-                <p class="texto_informativo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="boton-copiar" type="button">Copiar</button>
+                <div class="advertenvia-Texto">
+                    <h1 class="advertencia-encriptado-texto">Ningún mensaje fue encontrado</h1>
+                    <p class="texto_informativo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
             </div>
         </section>
         

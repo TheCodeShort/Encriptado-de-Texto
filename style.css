@@ -1,6 +1,7 @@
+/*esto es un selector universal */
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0px;/*es un margen que tiene el documeto html*/
+    margin: 0px;/*espacio interno */
     /*font-family: "Inter";
     font-weight: 400;
     font-size: 32px;
@@ -9,87 +10,187 @@
 }
 
 main{
-    display: flex;
     background-color: #F3F5FC;
-    box-sizing: border-box;
-    /*vh es la altura del contenedor*/
+    position: relative;
+    /* box-sizing: border-box; */
+    /*vh es la altura y ancho del contenedor*/
     height: 100vh;
+    width: 100vw;
 }
 
 
 .normal-textto{
-    font-family: "Inter";
-    font-weight: 400;
-    font-size: 32px;
-    line-height:150%;
     background-color: #F3F5FC;
     resize: none;  /*resize: none; sirve para evitar que usuario no pueda graduar el cuadro*/
     border: none;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    width: 42%;
+    height: 60%;
     border-radius: 2px;
-    width: 600px;
-    height: 605px;
-    position: absolute;/*position: relative; posicionar un elementos n cualquier lugar siin qu este fijo si no se pone esto quedara por defecto static que no deja mover el objeto*/
-    top: 188px;
-    left: 240px;
+    font-family: "Inter";
+    font-weight: 400; /*entre mas grande el peso mas es negra la letra*/
+    font-size: 32px;/*tamaño de la letra*/
+    line-height:150%;
+    
 }
 
 textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de una etiqueta en este caso de <textare>*/
     color: #0A3871;
 }
 
-.normal-textto:focus{
-    outline: none;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+.normal-textto:focus,/*focus sirve para hacer cambios de colores y en este caso quitar un brode cuando se leda click*/
+.normal-textto:active{/*active srive para que el palo que aparece cada vez que escribimos parpadee*/
+    outline: none;/*aca le quitamos el borde cuando damos un click*/
+    border: none;
 }
 
 
 
 .advertencia-encriptador{
-    font-family: "Inter";
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 0px;
     gap: 8px;
-    width: 229px;
-    height: 18px;
-    position: relative;
-    top: 851px;
-    left: 240px;
+    width: 80%;
+    /* height: 18px; */
+    position: absolute;
+    top: 80%;
+    left: 12%;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
+.advertencia-encriptador p h1{
+    font-family: "Inter";
+    font-weight: 400; /*entre mas grande el peso mas es negra la letra*/
+    font-size: 12px;/*tamaño de la letra*/
+    line-height:150%;
+    opacity: 0.8;
+    flex: none;
+    flex-grow: 0;
+}
 
-.encrptador-botones{
-    position: relative;
-    top: 885px;
-    left: 240px; 
+.botones{
     display: flex;/*esto nos sirve para convertir el cotenedor en un flex (para comnzar a utilizar sus propiedades flexbox)*/
     flex-direction: row;/*aca le damos la direccion que va ha tomar los elementos que estan dentro de el contenedor*/
+    align-items: flex-start;
+    position: absolute;
+    padding: 1% 0;
+    width: 80%;
+    top: 82%;
+    left: 12%; 
     gap: 24px; /*esto funcion no sirve con las 2 anteriores como otras funcione*/
 }
 
 .boton-Encriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;/*ancho del boton*/
     background-color: #0A3871;
     color: #FFFFFF;
     border-radius: 24px;
     border-style: solid #0A3871;
-    width: 328px;
-    height: 67px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height:19px;
+    text-align: center;
+    
+    
 }
 
 .boton-Desencriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    border: 1px solid #0A3871;
     background-color: #D8DFE8;
     color: #0A3871;
     border-radius: 24px;
-    border-style: solid #0A3871;
-    width: 328px;
-    height: 67px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 18px;
+    line-height:19px;
+    text-align: center;
+}
+.boton-Desencriptar:hover,/*esto sirve para cuando le pasa el cursor por encima y se haga una modificación */
+.boton-Encriptar:hover{
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+
+
+.texto-Encriptado{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
+    resize: none;  
+    border: none;/*para borrar el borde qeu tiene por defecto textarea*/
+    /* 
+    text-transform: lowercase;
+    background-image: url(img/Muñeco.png); esto es para poner una imagen de fondo 
+    background-repeat: no-repeat;  esto me sirve para no no se repita
+    background-position: 32px 283px; con esto movemos la imagen */ 
+    
+}
+
+.texto-Encriptado:focus{
+    outline: none;/*esto sirve para que todo el texto que se escriba sea minuscula*/
 }
 
 .encriptador-texto-informativo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
 }
+
+.encriptador-texto-informativo img{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top : 15%;
+}
+
+.encriptador-texto-informativo h2{
+    width: 60%;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 24px;
+    line-height:120%;
+    text-align: center;
+}
+
+.encriptador-texto-informativo p{
+    width: 80%;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height:150%;
+    text-align: center;
+}
+
+
+/* 
 
 .boton-copiar{
     background-color: #D8DFE8;
@@ -104,39 +205,63 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 }
 
 
-.desencitador-de-texto{
-    background-color: #FFFFFF;
-    border-radius: 32px;
-    resize: none;  
-    border: none;/*para borrar el borde qeu tiene por defecto textarea*/
-    width: 400px;
-    height: 944px;
-    position: absolute;
-    left: 1000px;
-    top: 40px;
-    text-transform: lowercase;
-    background-image: url(img/Muñeco.png); /*esto es para poner una imagen de fondo */
-    background-repeat: no-repeat; /*esto me sirve para no no se repita*/
-    background-position: 32px 283px;/*con esto movemos la imagen*/
-    
-}
-
-.desencitador-de-texto:focus{
-    outline: none;/*esto sirve para que todo el texto que se escriba sea minuscula*/
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-}
-
-/*como hay mas de un div toca espesificar de donde biene el textarea
-despues biene el textarea el focus y dentro espesificamos el cambio a realizar */
-.encriptador-texto-informativo textarea:focus {
-    box-shadow: 0 0 5px #0A3871
-}
 .imagen-letra-A{
     width: 120px;
     height: 48px;
-    position: absolute;
+    position: relative;
     left: 40px;
     top: 40px;
 }
+ */
 
 
+/*diseños reponsivos*/
+
+@media(max-width: 57.5rem){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptador{
+        width: 100%;
+    }
+    .normal-textto{
+        width: 80%;
+        height: 60%;
+        top: 5%;
+    }
+    .advertencia-encriptador {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+    .advertencia-encriptador p{
+        font-size: 16px;
+    }
+
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 70%
+    }
+    .boton-Encriptar,
+    .boton-Desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+    .boton-Encriptar:hover,.boton-Desencriptar:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .enciptado{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+    .advertenvia-Texto{
+    width: 100%;
+    top: 5%;
+    }
+}

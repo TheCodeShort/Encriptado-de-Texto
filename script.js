@@ -1,33 +1,34 @@
-let listaTextoNoEncritado = [];
-let listaTextoEncriptado = [];
-let vocales = ["a", "e", "i", "o", "u"];
-let vocalesEncontradas = [];
-
+let textoEncritado = [];
 
 function encritarBoton() {
-    let EncriptadoTextoBoton = document.getElementById("normalTexto").value;
-    listaTextoNoEncritado.push(EncriptadoTextoBoton);
-    console.log(`texto: ${listaTextoNoEncritado}`, listaTextoNoEncritado);
+    let noEncriptadoTextoBoton = document.getElementById("normalTexto").value;
+    
+    /*.replace(/e/gi "") nos cambia una letra y el primer parametro me esta diciendo que vamos a cambiar la letra 
+    e por la palabra enter que es lo que se pone entre comillas */
+    let cifradoTexto = noEncriptadoTextoBoton
+                                            .replace(/e/gi, "enter")
+                                            .replace(/i/gi, "imes")
+                                            .replace(/a/gi, "ai")
+                                            .replace(/o/gi, "ober")
+                                            .replace(/u/gi, "ufat");
 
-/*i inicia de la pocicion cero, si i es menor a la cantidad de la lista segira ejecutandose*/ 
-    for (let i = 0; i < listaTextoNoEncritado.length; i++) {
-
-        /*aca estamos accediendo al caracter de la lista en la posicion 
-        si i es cero nos dara el primer caraacter asi con las demas */
-        let letras = listaTextoNoEncritado[i];
-
-        if (vocales.includes(letras)){
-            vocalesEncontradas.push(letras);
-        }
-    }
-    console.log(`las vocales son: ${vocalesEncontradas}`);
+    document.getElementById("encritadoTexto").value = cifradoTexto;
+    document.getElementById("normalTexto").value = "";
     return;
 }
 
+
 function desencritarBoton(){
     let EncriptadoTextoBoton = document.getElementById("encritadoTexto").value;
-    listaTextoEncriptado.push(EncriptadoTextoBoton);
-    console.log(`texto: ${listaTextoEncriptado}`, listaTextoEncriptado);
+    let cifradoTexto = EncriptadoTextoBoton
+                                            .replace(/enter/gi, "e")
+                                            .replace(/imes/gi, "i")
+                                            .replace(/ai/gi, "a")
+                                            .replace(/ober/gi, "o")
+                                            .replace(/ufat/gi, "u");
+
+    document.getElementById("normalTexto").value = cifradoTexto;
+    document.getElementById("encritadoTexto").value = "";
     return;
 }
 
