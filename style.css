@@ -126,8 +126,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     padding: 1.8%;
 }
 
-
-.texto-Encriptado{
+.encriptado{
     display: flex;
     justify-content: center;
     position: absolute;
@@ -137,41 +136,68 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     top: 5%;
     background-color: #FFFFFF;
     border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);/*se crea una sombra*/
     resize: none;  
-    border: none;/*para borrar el borde qeu tiene por defecto textarea*/
-    /* 
-    text-transform: lowercase;
-    background-image: url(img/Muñeco.png); esto es para poner una imagen de fondo 
-    background-repeat: no-repeat;  esto me sirve para no no se repita
-    background-position: 32px 283px; con esto movemos la imagen */ 
-    
+    border: none;
 }
 
-.texto-Encriptado:focus{
-    outline: none;/*esto sirve para que todo el texto que se escriba sea minuscula*/
+.texto-Encriptado{
+    position: absolute;
+    resize: none;
+    border: none;
+    top: 1.5%;
+    width: 95% !important; /*de esta manera hacemos que se modifique el tamaño de manera forzada*/
+    height: 84.5% !important;
+    font-family: "Inter";
+    font-weight: 400; /*entre mas grande el peso mas es negra la letra*/
+    font-size: 28px;/*tamaño de la letra*/
+    line-height:150%;
 }
 
-.encriptador-texto-informativo{
+.texto-Encriptado:focus,/*focus sirve para hacer cambios de colores y en este caso quitar un brode cuando se leda click*/
+.texto-Encriptado:active{/*active srive para que el palo que aparece cada vez que escribimos parpadee*/
+    outline: none;/*aca le quitamos el borde cuando damos un click*/
+}
+
+.encriptado img{
+    position: absolute;
+    align-items: center;
+    width: 78%;
+    height: 50%;
+    top : 10%;
+    left: 6%;
+}
+
+.encriptador-texto-informativo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1%;
-    gap: 16px;
+    gap :16px;
     position: absolute;
+    text-align: center;
     width: 100%;
-    top: 65%;
+    top: 63%;
 }
 
-.encriptador-texto-informativo img{
+
+.boton-copiar{
     position: absolute;
-    width: 80%;
-    height: 50%;
-    top : 15%;
+    width: 65%;/*ancho del boton*/
+    top: 89%;
+    padding: 4%;
+    border-radius: 24px;
+    border: 1px  solid #0A3871;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height:19px;
+    text-align: center;
 }
 
-.encriptador-texto-informativo h2{
+.encriptador-texto-informativo h1{
     width: 60%;
     font-family: "Inter";
     font-weight: 700;
@@ -189,22 +215,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     text-align: center;
 }
 
-
-/* 
-
-.boton-copiar{
-    background-color: #D8DFE8;
-    color: #0A3871;
-    border-radius: 24px;
-    border-style: solid #0A3871;
-    width: 336px;
-    height: 67px;
-    position: absolute;
-    left: 1032px;
-    top: 901px;
-}
-
-
+/*
 .imagen-letra-A{
     width: 120px;
     height: 48px;
