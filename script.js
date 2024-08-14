@@ -2,6 +2,8 @@ let textoEncritado = [];
 
 function encritarBoton() {
     let noEncriptadoTextoBoton = document.getElementById("normalTexto").value;
+    let personaImg = document.getElementsByClassName("personaImg").value;
+    let TextoInformativo = document.getElementsByClassName("TextoInformativo").value;
     
     /*.replace(/e/gi "") nos cambia una letra y el primer parametro me esta diciendo que vamos a cambiar la letra 
     e por la palabra enter que es lo que se pone entre comillas */
@@ -32,6 +34,10 @@ function desencritarBoton(){
     return;
 }
 
+
+function  botonCopiar(){
+    botonCopiar
+}
 
 
 /* 
