@@ -1,9 +1,9 @@
 let textoEncritado = [];
 
 function encritarBoton() {
-    let noEncriptadoTextoBoton = document.getElementById("normalTexto").value;
-    let personaImg = document.getElementsByClassName("personaImg").value;
-    let TextoInformativo = document.getElementsByClassName("TextoInformativo").value;
+    let noEncriptadoTextoBoton = document.getElementById("normalTexto").value.toLowerCase();
+    let personaImg = document.getElementById("personaImg");
+    let TextoInformativo = document.getElementById("TextoInformativo");
     
     /*.replace(/e/gi "") nos cambia una letra y el primer parametro me esta diciendo que vamos a cambiar la letra 
     e por la palabra enter que es lo que se pone entre comillas */
@@ -13,15 +13,21 @@ function encritarBoton() {
                                             .replace(/a/gi, "ai")
                                             .replace(/o/gi, "ober")
                                             .replace(/u/gi, "ufat");
-
-    document.getElementById("encritadoTexto").value = cifradoTexto;
-    document.getElementById("normalTexto").value = "";
+    if(noEncriptadoTextoBoton.length != 0){
+        document.getElementById("encritadoTexto").value = cifradoTexto;
+        document.getElementById("normalTexto").value = "";
+        TextoInformativo.textContent = "";
+        personaImg.style.display = "none";
+    }
     return;
 }
 
 
 function desencritarBoton(){
-    let EncriptadoTextoBoton = document.getElementById("encritadoTexto").value;
+    let EncriptadoTextoBoton = document.getElementById("encritadoTexto").value.toLowerCase();
+    let personaImg = document.getElementById("personaImg");
+    let TextoInformativo = document.getElementById("TextoInformativo");
+
     let cifradoTexto = EncriptadoTextoBoton
                                             .replace(/enter/gi, "e")
                                             .replace(/imes/gi, "i")
@@ -29,8 +35,12 @@ function desencritarBoton(){
                                             .replace(/ober/gi, "o")
                                             .replace(/ufat/gi, "u");
 
-    document.getElementById("normalTexto").value = cifradoTexto;
-    document.getElementById("encritadoTexto").value = "";
+    if(EncriptadoTextoBoton.length != 0){
+        document.getElementById("normalTexto").value = cifradoTexto;
+        document.getElementById("encritadoTexto").value = "";
+        TextoInformativo.textContent = "";
+        personaImg.style.display = "none";
+    }
     return;
 }
 
