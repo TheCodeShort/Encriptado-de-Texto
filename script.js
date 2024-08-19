@@ -1,6 +1,17 @@
-let textoEncritado = [];
+
+/* de esta manera haces un evento, cuando se haga un click en textarea se van a desapareser ciertas cosas */
+
+function advertenciaTexto(){
+    document.getElementById("encritadoTexto").addEventListener("click", () =>{
+        let personaImg = document.getElementById("personaImg");
+        let TextoInformativo = document.getElementById("TextoInformativo");
+        personaImg.style.display = "none";
+        TextoInformativo.style.display = "none";
+    });
+}
 
 function encritarBoton() {
+
     let noEncriptadoTextoBoton = document.getElementById("normalTexto").value.toLowerCase();
     let personaImg = document.getElementById("personaImg");
     let TextoInformativo = document.getElementById("TextoInformativo");
@@ -16,8 +27,13 @@ function encritarBoton() {
     if(noEncriptadoTextoBoton.length != 0){
         document.getElementById("encritadoTexto").value = cifradoTexto;
         document.getElementById("normalTexto").value = "";
-        TextoInformativo.textContent = "";
+        TextoInformativo.style.display = "none";
         personaImg.style.display = "none";
+    }else{
+        alert("No se detecto un mensaje para encriptar");
+        personaImg.style.display = "block";
+        TextoInformativo.style.display = "flex";
+        document.getElementById("encritadoTexto").value = "";
     }
     return;
 }
@@ -38,18 +54,18 @@ function desencritarBoton(){
     if(EncriptadoTextoBoton.length != 0){
         document.getElementById("normalTexto").value = cifradoTexto;
         document.getElementById("encritadoTexto").value = "";
-        TextoInformativo.textContent = "";
+        TextoInformativo.style.display = "none";
         personaImg.style.display = "none";
+    }else{
+        alert("No se encontro un texto para desencriptar");
+        personaImg.style.display = "block";
+        TextoInformativo.style.display = "flex";
+        document.getElementById("normalTexto").value = "";
     }
     return;
 }
 
-
-function  botonCopiar(){
-    botonCopiar
-}
-
-
+advertenciaTexto();
 /* 
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"

@@ -152,6 +152,8 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     font-weight: 400; /*entre mas grande el peso mas es negra la letra*/
     font-size: 28px;/*tamaño de la letra*/
     line-height:150%;
+    z-index: 2;/* de esta manera posicionamos los elemnetos aca decimos que textarea va de segundas y primero va otras cosas por ende textarea quedara encima de otrso objetos */
+    background: transparent;/* para que textarea sea trasparente y no tape lo que esta deprimeras */
 }
 
 .texto-Encriptado:focus,/*focus sirve para hacer cambios de colores y en este caso quitar un brode cuando se leda click*/
