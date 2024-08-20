@@ -199,6 +199,12 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     text-align: center;
 }
 
+.boton-copiar:hover{
+    margin: 0.5%;
+    width: 65%;
+    padding: 3.5%;
+}
+
 .encriptador-texto-informativo h1{
     width: 60%;
     font-family: "Inter";

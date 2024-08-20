@@ -26,14 +26,14 @@
             <div class="botones">
                 <!--atributo type de la etiqueta <button> especifica el comportamiento que tendrá el botón cuando se haga clic en él
                     pero hay que tener encuenta q podemos poner varios type que hacen distintas cosas -->
-                <button onclick="encritarBoton()" class="boton-Encriptar" type="button">Encriptar</button>
-                <button onclick="desencritarBoton()" class="boton-Desencriptar" type="button">Desencriptar</button>
+                <button onclick="encritarBoton()" id="encritarBoton" class="boton-Encriptar" type="button">Encriptar</button>
+                <button onclick="desencritarBoton()" id="desencriptarBoton" class="boton-Desencriptar" type="button">Desencriptar</button>
             </div>
         </section>
 
         <section class="encriptado">
-            <textarea id="encritadoTexto" class="texto-Encriptado" rows="50" cols="50" name="encriptado-texto" ></textarea>
-            <button onclick="botonCopiar()" id="botonCopiar" class="boton-copiar" type="button">Copiar</button>
+            <textarea id="encritadoTexto" class="texto-Encriptado" rows="50" cols="50"  name="encriptado-texto" ></textarea>
+            <button onclick="copiarBoton()" id="botonCopiar" class="boton-copiar" type="button">Copiar</button>
             <img id="personaImg" class="personaimg" src="img/Muñeco.png" alt="una persona">
 
             <div id="TextoInformativo" class="encriptador-texto-informativo">
