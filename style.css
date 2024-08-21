@@ -223,15 +223,15 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
     text-align: center;
 }
 
-/*
+
 .imagen-letra-A{
-    width: 120px;
-    height: 48px;
+    width: 7%;
+    height: 7%;
     position: relative;
-    left: 40px;
-    top: 40px;
+    left: 1%;
+    top: 4%;
 }
- */
+
 
 
 /*diseños reponsivos*/

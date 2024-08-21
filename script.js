@@ -27,24 +27,28 @@ function encritarBoton() {
                                             .replace(/o/gi, "ober")
                                             .replace(/u/gi, "ufat");
 
-
+    if(noEncriptadoTextoBoton.length != 0){
+        document.getElementById("encritadoTexto").value = cifradoTexto;
+        document.getElementById("normalTexto").value = "";
+        TextoInformativo.style.display = "none";
+        personaImg.style.display = "none";
+        console.log("encritado con exito");
+        
+    }else{
+        alert("No se detecto un mensaje para encriptar");
+        personaImg.style.display = "block";
+        TextoInformativo.style.display = "flex";
+        document.getElementById("encritadoTexto").value = "";
+        console.log("alerta activada");
+        
+    }
     if(!caracteres.test(noEncriptadoTextoBoton)) {
         alert("El campo de del texto sin encriptar no debe contener caracteres especiales ni numeros ");
         document.getElementById("normalTexto").value = "";
         document.getElementById("encritadoTexto").value = "";
         personaImg.style.display = "block";
         TextoInformativo.style.display = "flex";
-
-    }else if(noEncriptadoTextoBoton.length != 0){
-        document.getElementById("encritadoTexto").value = cifradoTexto;
-        document.getElementById("normalTexto").value = "";
-        TextoInformativo.style.display = "none";
-        personaImg.style.display = "none";
-    }else{
-        alert("No se detecto un mensaje para encriptar");
-        personaImg.style.display = "block";
-        TextoInformativo.style.display = "flex";
-        document.getElementById("encritadoTexto").value = "";
+        console.log("alerta 2 activada");
     }
     return;
 }
@@ -63,24 +67,25 @@ function desencritarBoton(){
                                             .replace(/ober/gi, "o")
                                             .replace(/ufat/gi, "u");
 
+    if (EncriptadoTextoBoton.length != 0){
+        document.getElementById("normalTexto").value = cifradoTexto;
+        document.getElementById("encritadoTexto").value = "";
+        TextoInformativo.style.display = "none";
+        personaImg.style.display = "none";
+
+        }else{
+            alert("No se encontro un texto para desencriptar");
+            document.getElementById("normalTexto").value = "";
+            personaImg.style.display = "block";
+            TextoInformativo.style.display = "flex";
+        }
+
     if(!caracteres.test(EncriptadoTextoBoton)) {
         alert("El campo de del texto encriptado no debe contener caracteres especiales ni numeros ");
         document.getElementById("normalTexto").value = "";
         document.getElementById("encritadoTexto").value = "";
         personaImg.style.display = "block";
         TextoInformativo.style.display = "flex";
-
-    }else if (EncriptadoTextoBoton.length != 0){
-        document.getElementById("normalTexto").value = cifradoTexto;
-        document.getElementById("encritadoTexto").value = "";
-        TextoInformativo.style.display = "none";
-        personaImg.style.display = "none";
-
-    }else{
-        alert("No se encontro un texto para desencriptar");
-        personaImg.style.display = "block";
-        TextoInformativo.style.display = "flex";
-        document.getElementById("normalTexto").value = "";
     }
     return;
 }
@@ -88,20 +93,23 @@ function desencritarBoton(){
 
 function copiarBoton(){
     let EncriptadoTextoBoton = document.getElementById("encritadoTexto");
-    if(EncriptadoTextoBoton.length != 0){
-        EncriptadoTextoBoton.select();
-        EncriptadoTextoBoton.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(EncriptadoTextoBoton.value);/* navigator.clipboard es parte de la Clipboard API, que proporciona acceso para leer y escribir en el portapapeles del sistema de forma segura. */
-        alert(`texto copiado ${EncriptadoTextoBoton.value}`);
-        console.log(`El texto a sido copiado ${EncriptadoTextoBoton}`);
+    let personaImg = document.getElementById("personaImg");
+    let TextoInformativo = document.getElementById("TextoInformativo");
+    
+    if(EncriptadoTextoBoton.value.trim() === ""){
+        alert("texto hay texto para copiar");
+
         
-    }else{
-        alert("No se encontro un texto para copiar");
-        personaImg.style.display = "block";
-        TextoInformativo.style.display = "flex";
+    }else if(EncriptadoTextoBoton.length != 0){
+            EncriptadoTextoBoton.select();
+            EncriptadoTextoBoton.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(EncriptadoTextoBoton.value);/* navigator.clipboard es parte de la Clipboard API, que proporciona acceso para leer y escribir en el portapapeles del sistema de forma segura. */
+            alert(`texto copiado ${EncriptadoTextoBoton.value}`);
+            console.log(`El texto a sido copiado ${EncriptadoTextoBoton}`);
     }
     return;
-}   
+}
+
 advertenciaTexto();
 /*
 La letra "e" es convertida para "enter"
