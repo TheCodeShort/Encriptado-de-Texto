@@ -236,7 +236,7 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 
 /*diseños reponsivos*/
 
-@media(max-width: 57.5rem){
+@media(max-width: 57.5rem){/* se activa cuando la pantalla este en cierto tamño */
     .container{
         display: flex;
         flex-direction: row;
