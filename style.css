@@ -16,7 +16,7 @@
     /*vh es la altura y ancho del contenedor*/
     height: 100vh;
     width: 100vw;
-    overflow-y: auto;
+    overflow-y: auto;/* nos ayuda para que si el contenido es mas grande se adapte sin que se salga nada de la pantalla principal  */
 }
 
 
