@@ -9,13 +9,14 @@
     
 }
 
-main{
+.container{
     background-color: #F3F5FC;
     position: relative;
     /* box-sizing: border-box; */
     /*vh es la altura y ancho del contenedor*/
     height: 100vh;
     width: 100vw;
+    overflow-y: auto;
 }
 
 
@@ -234,53 +235,169 @@ textarea::placeholder{ /*de esta manera le cambio propiedades a los atributos de
 
 
 
-/*diseños reponsivos*/
+/*diseños reponsivos
+poner los valores mas grandes en el principio y los valores menores van despues como si fuera en cascada */
 
-@media(max-width: 57.5rem){/* se activa cuando la pantalla este en cierto tamño */
+@media(max-width: 49.25rem){/* se activa cuando la pantalla este en cierto tamño */
     .container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        
     }
     .encriptador{
         width: 100%;
     }
     .normal-textto{
-        width: 80%;
-        height: 60%;
-        top: 5%;
-    }
-    .advertencia-encriptador {
-        width: 80%;
-        left: 10%;
-        top: 67%;
-    }
-    .advertencia-encriptador p{
-        font-size: 16px;
+        width: 92%;
+        height: 90%;
+        left: 4%;
     }
 
     .botones{
-        width: 80%;
-        left: 10%;
-        top: 70%
+        top: 108%;
+
     }
-    .boton-Encriptar,
+    .advertencia-encriptador{
+        top: 105.5%;
+    }
+    .boton-Encriptar{
+        width: 50%;
+    
+    }
+
     .boton-Desencriptar{
-        width: 48%;
-        border-radius: 16px;
+        width: 50%;
     }
-    .boton-Encriptar:hover,.boton-Desencriptar:hover{
+
+    .boton-Desencriptar:hover,/*esto sirve para cuando le pasa el cursor por encima y se haga una modificación */
+    .boton-Encriptar:hover{
+    margin: 0.3%;
+    width: 49%;
+    padding: 1.8%;
+}
+
+    .encriptado{
+        width: 87%;
+        height: 100%;
+        top: 120%;
+        left: 5.5%;
+    }
+
+    .encriptador-texto-informativo{
+        top: 30%;
+    }
+
+    .encriptador-texto-informativo h1{
+        font-size: 27px;
+    }
+
+    .encriptador-texto-informativo p{
+        font-size: 25px;
+    }
+    .encriptado img{
+        display: none;
+    }
+    
+    .boton-copiar{
+        width: 50%;
+        padding: 2%;
+    }
+    .boton-copiar:hover{
         margin: 0.3%;
-        width: 47.5%;
+        width: 49%;
         padding: 1.8%;
     }
-    .enciptado{
-        width: 80%;
-        height: 15%;
-        left: 10%;
-        top: 80%;
+    .imagen-letra-A{
+        width: 10%;
+        height: 4%;
+        top: 7%;
+        left: 2;
     }
-    .advertenvia-Texto{
-    width: 100%;
-    top: 5%;
+
+}
+
+
+@media(max-width: 23.48rem){
+    .container{
+        display: flex;
+    /*  flex-direction: column;
+        align-items: center; */
+        
     }
+    .encriptador{
+        width: 100%;
+    }
+    .normal-textto{
+        width: 88%;
+        height: 70%;
+        left: 5%;
+        top: 7%;
+    }
+    .normal-textto::placeholder{
+        font-size: 30px;
+    }
+    .advertencia-encriptador{
+        top: 78%;
+        font-size: 12px;
+    }
+    .botones{
+        top: 81%;
+        display:flex;
+        flex-direction: row;
+    }
+    .boton-Encriptar{
+        font-size: 93%;
+        width: 40%;
+    }
+    .boton-Desencriptar{
+        font-size: 93%;
+        width: 40%;
+    }
+    .boton-Desencriptar:hover,/*esto sirve para cuando le pasa el cursor por encima y se haga una modificación */
+    .boton-Encriptar:hover{
+    margin: 0.3%;
+    width: 39%;
+    padding: 1.8%;
+}
+    .encriptado{
+        width: 87%;
+        height: 77%;
+        top: 89%;
+        left: 7%;
+    }
+    .encriptador-texto-informativo{
+        top: 10%;
+    }
+    .encriptador-texto-informativo h1{
+        font-size: 12.4px;
+    }
+
+    .encriptador-texto-informativo p{
+        font-size: 12.4px;
+    }
+
+    .texto-Encriptado{
+        height: 75%!important;
+        top: 7%;
+    }
+    .boton-copiar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 8.5%;
+        top: 85%;
+        font-size: 17px;
+    }
+    .boton-copiar:hover{
+        margin: 0.5%;
+        width: 49%;
+        padding: 4%;
+    }
+    .imagen-letra-A{
+        width: 10.5%;
+        height: 4%;
+        top: 2%;
+    }
+
 }
