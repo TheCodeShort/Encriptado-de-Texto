@@ -10,29 +10,6 @@ function advertenciaTexto(){
     });
 }
 
-/* function tamañoCelularEncriptar() {
-    document.getElementById("encritarBoton").addEventListener("click", () =>{
-    
-        if(window.matchMedia("(max-width: 23.48rem)").matches){/* esto sirve para que haga algo cuando ell tamaño sea el indicado 
-            let personaImg = document.getElementById("personaImg");
-            personaImg.style.display = "none";
-            
-        }
-    });
-    return;
-}
-function tamañtamañoCelularDesencriptar() {
-    document.getElementById("desencriptarBoton").addEventListener("click", () =>{
-    
-        if(window.matchMedia("(max-width: 23.48rem)").matches){ /*esto sirve para que haga algo cuand o ell tamaño sea el indicado 
-            let personaImg = document.getElementById("personaImg");
-            personaImg.style.display = "none";
-            
-        }
-    });
-    return;
-} */
-
 
 function encritarBoton() {
 
